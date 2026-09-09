@@ -1,0 +1,23 @@
+{
+  "name": "ig-shadowban",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Instagram visibility analysis application",
+  "packageManager": "npm@11.12.1",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "dev:frontend": "npm run start --workspace=@ig-shadowban/frontend",
+    "dev:backend": "npm run start:dev --workspace=@ig-shadowban/backend",
+    "start:frontend": "npm run start --workspace=@ig-shadowban/frontend",
+    "start:backend": "npm run start --workspace=@ig-shadowban/backend",
+    "prisma:format": "npm exec --workspace=@ig-shadowban/backend -- prisma format --schema=../prisma/schema.prisma",
+    "prisma:validate": "npm exec --workspace=@ig-shadowban/backend -- prisma validate --schema=../prisma/schema.prisma",
+    "prisma:generate": "npm exec --workspace=@ig-shadowban/backend -- prisma generate --schema=../prisma/schema.prisma"
+  }
+}

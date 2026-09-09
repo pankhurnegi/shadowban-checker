@@ -1,5 +1,5 @@
 {
-  "name": "ig-shadowban-backend",
+  "name": "@ig-shadowban/backend",
   "version": "1.0.0",
   "private": true,
   "scripts": {

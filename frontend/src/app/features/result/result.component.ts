@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 
 @Component({
   selector: 'app-result',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollRevealDirective],
   template: `
     <main class="min-h-screen bg-slate-100 px-6 py-12 text-slate-900">
-      <div class="mx-auto max-w-5xl rounded-3xl border border-slate-200 bg-white p-8 shadow-lg md:p-10">
+      <div class="mx-auto max-w-5xl rounded-3xl border border-slate-200 bg-white p-8 shadow-lg md:p-10" appScrollReveal>
         <div class="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Instagram Visibility Analysis</div>
         <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>

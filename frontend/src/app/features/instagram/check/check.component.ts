@@ -2,14 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ScrollRevealDirective } from '../../../shared/scroll-reveal.directive';
 
 @Component({
   selector: 'app-check',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ScrollRevealDirective],
   template: `
     <main class="min-h-screen bg-slate-100 px-6 py-14 text-slate-900">
-      <div class="mx-auto max-w-2xl rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
+      <div class="mx-auto max-w-2xl rounded-3xl border border-slate-200 bg-white p-8 shadow-lg" appScrollReveal>
         <div class="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Checking</div>
         <h2 class="text-3xl font-bold">Checking @{{ username }}...</h2>
 
